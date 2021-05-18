@@ -65,10 +65,10 @@
 
                 </ul>
 
-                <button class="btn btn-outline-success btn-outline-green  mr-2 font-weight-bold"
-                    type="submit">Login</button>
-                <button class="btn btn-outline-success btn-outline-green font-weight-bold"
-                    type="submit">Cadastrar-se</button>
+                <button class="btn btn-outline-success btn-outline-green  mr-2 font-weight-bold" type="submit"
+                    data-toggle="modal" data-target="#modal-login">Login</button>
+                <button class="btn btn-outline-success btn-outline-green font-weight-bold" type="submit"
+                    data-toggle="modal" data-target="#modal-cadastro">Cadastrar-se</button>
 
 
             </div>
@@ -330,11 +330,9 @@
 
                 <div class="py-5 d-flex flex-column justify-content-center align-items-center px-2"
                     style="min-height: 350px">
-                    <a class="display-4 " style="font-size: 2.0rem; ">BdasdasdOA dasdsad SENHOR AUGSOPDAJS ESE dasdasdasd E
-                        dasdasd DEMAIS
-                        dsadsdasds dasdasd DAS DASDASCS DASDASD ASD ADD KKIO KIKOK OKOKO KOK OKOL OL O LO LO LKOIHJHU
-                        JUIJUHH A DSADA
-                        DASSA AAAAAAAA DSDSDDSDAASDSD DOSJKUJKSLJ SKDJASKDASJDADJA JDK</a>
+                    <a class="display-4 " style="font-size: 2.0rem; ">orem ipsum mollis turpis augue class scelerisque,
+                        lectus semper mauris arcu class sagittis eros, nunc vivamus aptent nibh dui. scelerisque
+                        placerat fusce nisl vitae vestibulum donec suspend</a>
                 </div>
 
                 <a class="display-5 ">Carlinhos de abreu</a>
@@ -347,13 +345,12 @@
                 <h1 class="display-4">Oque nossos clientes falam?</h1>
                 <div class="py-5 d-flex flex-column justify-content-center align-items-center px-2"
                     style="min-height: 350px">
-                    <a class="display-4 " style="font-size: 2.0rem; ">dasdasd ASS ASDASDA ASD ASDDE SENHOR
-                        AUGSOPDAJS ESE PEdasdasdNIS E
-                        dasdas dasdasd
-                        dasdas dasdas DAS DASDASCS DASDASD ASD ADD KKIO KIKOK OKOKO KOK OKOL OL O LO
-                        LO LKOIHJHU
-                        JUIJUHH A DSADA
-                        DASSA AAAAAAAA DSDSDDSDAASDSD DOSJKUJKSLJ SKDJASKDASJDADJA JDK</a>
+                    <a class="display-4 " style="font-size: 2.0rem; ">na sagittis auctor mattis integer conubia in,
+                        curae libero scelerisque curabitur integer etiam urna pretium. aliquam ipsum posuere nulla
+                        lectus curae, facilisis fermentum donec eleifend cras dictum, etiam tellus donec at. mi vehicula
+                        massa venenatis vitae sit posuere, sit gravida pellentesque accumsan sociosqu, pharetra orci
+                        donec dictum laoreet. senectus pharetra tristique dictumst gravida curabitur bibendum sed
+                        sodales dictumst, hac erat viva</a>
                 </div>
                 <a class="display-5 ">Carlinhos de abreu</a>
 
@@ -365,13 +362,9 @@
 
                 <div class="py-5 d-flex flex-column justify-content-center align-items-center px-2"
                     style="min-height: 350px">
-                    <a class="display-4 " style="font-size: 2.0rem; ">BOaaaaA aaaaa aaaaa
-                        AUGSOPDAJS ESE aaaaaa E
-                        aaaaaa aaaaa
-                        SAU aaaaaaa DAS DASDASCS DASDASD ASD ADD KKIO KIKOK OKOKO KOK OKOL OL O LO
-                        LO LKOIHJHU
-                        JUIJUHH A DSADA
-                        DASSA AAAAAAAA DSDSDDSDAASDSD DOSJKUJKSLJ SKDJASKDASJDADJA JDK</a>
+                    <a class="display-4 " style="font-size: 2.0rem; ">nec mollis turpis class aliquam curabitur,
+                        ultricies quis velit ligula eget porta ultricies suspendisse sapien, ac volutpat luctus lectus
+                        interdum enim ultricies. vel rutrum quis pulvinar accumsan netus</a>
                 </div>
 
                 <a class="display-5 ">Carlinhos de abreu</a>
@@ -392,11 +385,11 @@
                                 <ul class="contact-details">
                                     <li>
                                         <span class="icon-earphones"></span> Call Us:
-                                        <a href="tel:344-755-111">344-755-111</a>
+                                        <a class="text-dark" href="#">344-755-111</a>
                                     </li>
                                     <li>
                                         <span class="icon-envelope-open"></span>
-                                        <a href="mailto:support@aazztech.com">support@aazztech.com</a>
+                                        <a class="text-dark" href="#">support@aazztech.com</a>
                                     </li>
                                 </ul>
                             </div>
@@ -410,19 +403,19 @@
                                 <h4 class="footer-widget-title">Popular Category</h4>
                                 <ul>
                                     <li>
-                                        <a href="#">Wordpress</a>
+                                        <a class="text-dark" href="#">Wordpress</a>
                                     </li>
                                     <li>
-                                        <a href="#">Plugins</a>
+                                        <a class="text-dark" href="#">Plugins</a>
                                     </li>
                                     <li>
-                                        <a href="#">Joomla Template</a>
+                                        <a class="text-dark" href="#">Joomla Template</a>
                                     </li>
                                     <li>
-                                        <a href="#">Admin Template</a>
+                                        <a class="text-dark" href="#">Admin Template</a>
                                     </li>
                                     <li>
-                                        <a href="#">HTML Template</a>
+                                        <a class="text-dark" href="#">HTML Template</a>
                                     </li>
                                 </ul>
                             </div>
@@ -438,25 +431,25 @@
                                 <h4 class="footer-widget-title">Our Company</h4>
                                 <ul>
                                     <li>
-                                        <a href="#">About Us</a>
+                                        <a class="text-dark" href="#">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="#">How It Works</a>
+                                        <a class="text-dark" href="#">How It Works</a>
                                     </li>
                                     <li>
-                                        <a href="#">Affiliates</a>
+                                        <a class="text-dark" href="#">Affiliates</a>
                                     </li>
                                     <li>
-                                        <a href="#">Testimonials</a>
+                                        <a class="text-dark" href="#">Testimonials</a>
                                     </li>
                                     <li>
-                                        <a href="#">Contact Us</a>
+                                        <a class="text-dark" href="#">Contact Us</a>
                                     </li>
                                     <li>
-                                        <a href="#">Plan &amp; Pricing</a>
+                                        <a class="text-dark" href="#">Plan &amp; Pricing</a>
                                     </li>
                                     <li>
-                                        <a href="#">Blog</a>
+                                        <a class="text-dark" href="#">Blog</a>
                                     </li>
                                 </ul>
                             </div>
@@ -472,25 +465,25 @@
                                 <h4 class="footer-widget-title">Help Support</h4>
                                 <ul>
                                     <li>
-                                        <a href="#">Support Forum</a>
+                                        <a class="text-dark" href="#">Support Forum</a>
                                     </li>
                                     <li>
-                                        <a href="#">Terms &amp; Conditions</a>
+                                        <a class="text-dark" href="#">Terms &amp; Conditions</a>
                                     </li>
                                     <li>
-                                        <a href="#">Support Policy</a>
+                                        <a class="text-dark" href="#">Support Policy</a>
                                     </li>
                                     <li>
-                                        <a href="#">Refund Policy</a>
+                                        <a class="text-dark" href="#">Refund Policy</a>
                                     </li>
                                     <li>
-                                        <a href="#">FAQs</a>
+                                        <a class="text-dark" href="#">FAQs</a>
                                     </li>
                                     <li>
-                                        <a href="#">Buyers Faq</a>
+                                        <a class="text-dark" href="#">Buyers Faq</a>
                                     </li>
                                     <li>
-                                        <a href="#">Sellers Faq</a>
+                                        <a class="text-dark" href="#">Sellers Faq</a>
                                     </li>
                                 </ul>
                             </div>
@@ -525,6 +518,95 @@
         </div>
     </footer>
 
+    <div class="modal fade" id="modal-login" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content"
+                style="border: 0; border-radius: 0; box-shadow: 0px 0px 19px -1px rgb(0 0 0 / 75%);">
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size: 2rem">&times;</span>
+                        </button></div>
+                </div>
+                <div class="row">
+                    <div class="col  ">
+                        <a class="display-4 modal-title justify-content-center d-flex"
+                            style="font-size: 2rem;">Login</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m-4">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mx-4 mb-3">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                </div>
+                <div class="text-center my-2">
+                    <button type="button" class="btn btn-success w-25" data-dismiss="modal">Entrar</button>
+
+                </div>
+                <hr class="w-100 text-dark">
+                <div class="d-flex justify-content-center mb-4">
+                    <a href="#" class=" text-dark">Inscreva-se</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-cadastro" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content"
+                style="border: 0; border-radius: 0; box-shadow: 0px 0px 19px -1px rgb(0 0 0 / 75%);">
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size: 2rem">&times;</span>
+                        </button></div>
+                </div>
+                <div class="row">
+                    <div class="col  ">
+                        <a class="display-4 modal-title justify-content-center d-flex"
+                            style="font-size: 2rem;">Cadastrar</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mx-4 my-3">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nome Completo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mx-4 mb-3">
+                        <input type="email" class="form-control" id="exampleInputEmail1"
+                            placeholder="Coloque seu E-mail">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mx-4 mb-3">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mx-4 mb-3">
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Confirmar Senha">
+                    </div>
+                </div>
+                <div class="text-center my-2">
+                    <button type="button" class="btn btn-success w-25" data-dismiss="modal">Entrar</button>
+
+                </div>
+                <hr class="w-100 text-dark">
+                <div class="d-flex justify-content-center mb-4">
+                    <a href="#" class=" text-dark">Ja tem conta?</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
