@@ -58,8 +58,8 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                             data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="#">Ver Membros</a>
-                                <a class="nav-link" href="#">Adicionar Membro</a>
+                                <a class="nav-link" href="Membros.php">Ver Membros</a>
+                                <a class="nav-link" href="addMembro.php">Adicionar Membro</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -193,7 +193,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 text-right p-1">
-                            <a href="#" class="display-4" style="color: #3cca8f; font-size: 1.5rem;">Ver Todos ></a> 
+                            <a href="Membros.php" class="display-4" style="color: #3cca8f; font-size: 1.5rem;">Ver Todos ></a> 
 
                         </div>
                     </div>
