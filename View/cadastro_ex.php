@@ -2,7 +2,7 @@
 session_start();
 include_once("connection.php");
 
-$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING); //q porra é filter_input?
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 $repassword = filter_input(INPUT_POST, 'passConfirm', FILTER_SANITIZE_STRING);
@@ -19,10 +19,9 @@ mysqli_query($conn, $result_user);
 
 
 if (mysqli_insert_id($conn)){
-    header("Location: cadastro_sucesso.php");
+    header("Location: addMembro.php");
 }else{
-    header("Location: home.php");
+    header("Location: index.php");
 }
-
 
 ?>

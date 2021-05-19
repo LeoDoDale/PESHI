@@ -22,7 +22,7 @@ $result_family = "INSERT INTO membro_familia(nome_membro, tipo_membro, genero_me
 mysqli_query($conn, $result_family);
 
 if (mysqli_insert_id($conn)){
-    header("Location: cadastro_sucesso.php");
+    header("Location: Membros.php");
 }else{
     header("Location: home.php");
 }

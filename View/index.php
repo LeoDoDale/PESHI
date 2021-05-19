@@ -132,17 +132,17 @@
                             <div class="card ">
                                 <div class="row no-gutters">
                                     <div class="col-lg-5 d-flex justify-content-center ">
-                                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t1.jpg"
+                                        <img src="../Resources/img/mulher.png"
                                             class="perfil-img" alt="...">
                                     </div>
                                     <div class="col-lg-7">
                                         <div class="card-body">
-                                            <h5 class="card-title">Alice Liddel</h5>
+                                            <h5 class="card-title">Yasmin</h5>
                                             <p class="card-text nowrap">Saldo: R$3234.00
                                             </p>
                                             <p class="card-text nowrap">Despesas: R$3213.32</p>
                                             <p class="card-text nowrap">Renda: R$2323.32</p>
-                                            <a href="#" class="btn btn-success bg-green stretched-link">View Profile</a>
+                                            <a href="#" class="btn btn-success bg-green stretched-link">Ver Perfil</a>
                                         </div>
                                     </div>
                                 </div>
@@ -152,17 +152,17 @@
                             <div class="card">
                                 <div class="row no-gutters">
                                     <div class="col-lg-5 d-flex justify-content-center ">
-                                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t2.jpg"
+                                        <img src="../Resources/img/homem.png"
                                             class="perfil-img" alt="...">
                                     </div>
                                     <div class="col-lg-7">
                                         <div class="card-body">
-                                            <h5 class="card-title">Alice Liddel</h5>
+                                            <h5 class="card-title">Paulo</h5>
                                             <p class="card-text nowrap">Saldo: R$3234.00
                                             </p>
                                             <p class="card-text nowrap">Despesas: R$3213.32</p>
                                             <p class="card-text nowrap">Renda: R$2323.32</p>
-                                            <a href="#" class="btn btn-success bg-green stretched-link">View Profile</a>
+                                            <a href="#" class="btn btn-success bg-green stretched-link">Ver Perfil</a>
                                         </div>
                                     </div>
                                 </div>
@@ -172,17 +172,17 @@
                             <div class="card">
                                 <div class="row no-gutters">
                                     <div class="col-lg-5 d-flex justify-content-center ">
-                                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t3.jpg"
+                                        <img src="../Resources/img/homem.png"
                                             class="perfil-img" alt="...">
                                     </div>
                                     <div class="col-lg-7">
                                         <div class="card-body">
-                                            <h5 class="card-title">Alice Liddel</h5>
+                                            <h5 class="card-title">Marcia</h5>
                                             <p class="card-text nowrap">Saldo: R$3234.00
                                             </p>
                                             <p class="card-text nowrap">Despesas: R$3213.32</p>
                                             <p class="card-text nowrap">Renda: R$2323.32</p>
-                                            <a href="#" class="btn btn-success bg-green stretched-link">View Profile</a>
+                                            <a href="#" class="btn btn-success bg-green stretched-link">Ver Perfil</a>
                                         </div>
                                     </div>
                                 </div>

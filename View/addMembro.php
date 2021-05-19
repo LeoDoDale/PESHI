@@ -22,8 +22,7 @@
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
-        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-        </form>
+        
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
@@ -129,10 +128,10 @@
             <div class="bg-light h-100">
                 <div class="container  " style="width: 600px;">
 
-                    <form>
+                    <form method="POST" action="membros_ex.php">
                         <div class="form-group">
                             <label for="inputAddress">Nome</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Joao augusto">
+                            <input type="text" class="form-control" name="name_member" id="inputAddress" placeholder="Joao augusto">
                         </div>
                         <div class="form-group">
 
@@ -140,16 +139,16 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputState">Genero</label>
-                                <select id="inputState" class="form-control">
+                                <select id="inputState" name="selectGender" class="form-control">
                                     <option selected>Homem</option>
-                                    <option>Homem</option>
+                                    <option>Mulher</option>
 
                                 </select>
                             </div>
 
                             <div class="col-md-6">
-                            <label for="inputState">State</label>
-                                <select id="inputState" class="form-control">
+                            <label for="inputState">Tipo</label>
+                                <select id="inputState" name="selectName" class="form-control">
                                     <option selected>Dependente</option>
                                     <option>Administrador</option>
                                 </select>

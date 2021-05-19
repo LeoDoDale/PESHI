@@ -37,34 +37,6 @@
 
 <body>
 
-    <?php
-session_start();
-include_once("connection.php");
-
-$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-$repassword = filter_input(INPUT_POST, 'passConfirm', FILTER_SANITIZE_STRING);
-
-$_SESSION['email'] = $email;
-
-// echo "Nome : $name <br>"; 
-// echo "Email : $email <br>"; 
-// echo "Senha : $password <br>"; 
-// echo "Confirmar Senha : $repassword <br>"; 
-
-$result_user = "INSERT INTO users(name , email, password, passConfirm) VALUES('$name', '$email', '$password', '$repassword')";
-mysqli_query($conn, $result_user);
-
-
-if (mysqli_insert_id($conn)){
-    header("Location: Membros.php");
-}else{
-    header("Location: home.php");
-}
-
-
-?>
 
     <nav class="navbar navbar-expand-lg py-lg-5 bg-green navbar-light" id="navbar">
         <div class="container">
@@ -549,32 +521,34 @@ if (mysqli_insert_id($conn)){
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content"
                 style="border: 0; border-radius: 0; box-shadow: 0px 0px 19px -1px rgb(0 0 0 / 75%);">
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true" style="font-size: 2rem">&times;</span>
-                        </button></div>
-                </div>
-                <div class="row">
-                    <div class="col  ">
-                        <a class="display-4 modal-title justify-content-center d-flex"
-                            style="font-size: 2rem;">Login</a>
+                <form method="POST" action="login.php">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" style="font-size: 2rem">&times;</span>
+                            </button></div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col m-4">
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <div class="row">
+                        <div class="col">
+                            <a class="display-4 modal-title justify-content-center d-flex"
+                                style="font-size: 2rem;">Login</a>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col mx-4 mb-3">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <div class="row">
+                        <div class="col m-4">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
                     </div>
-                </div>
-                <div class="text-center my-2">
-                    <button type="button" class="btn btn-success w-25" data-dismiss="modal">Entrar</button>
-
-                </div>
+                    <div class="row">
+                        <div class="col mx-4 mb-3">
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="text-center my-2">
+                        <button type="submit" class="btn btn-success w-25" >Entrar</button>
+                    </div>
+                </form>
                 <hr class="w-100 text-dark">
                 <div class="d-flex justify-content-center mb-4">
                     <a href="#" class=" text-dark">Inscreva-se</a>
@@ -588,44 +562,48 @@ if (mysqli_insert_id($conn)){
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content"
                 style="border: 0; border-radius: 0; box-shadow: 0px 0px 19px -1px rgb(0 0 0 / 75%);">
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true" style="font-size: 2rem">&times;</span>
-                        </button></div>
-                </div>
-                <div class="row">
-                    <div class="col  ">
-                        <a class="display-4 modal-title justify-content-center d-flex"
-                            style="font-size: 2rem;">Cadastrar</a>
+                <form method="POST" action="cadastro_ex.php">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" style="font-size: 2rem">&times;</span>
+                            </button></div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col mx-4 my-3">
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nome Completo">
+                    <div class="row">
+                        <div class="col  ">
+                            <a class="display-4 modal-title justify-content-center d-flex"
+                                style="font-size: 2rem;">Cadastrar</a>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col mx-4 mb-3">
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                            placeholder="Coloque seu E-mail">
+                    <div class="row">
+                        <div class="col mx-4 my-3">
+                            <input type="text" class="form-control" name="name" id="exampleInputEmail1"
+                                placeholder="Nome Completo">
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col mx-4 mb-3">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                    <div class="row">
+                        <div class="col mx-4 mb-3">
+                            <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                                placeholder="Coloque seu E-mail">
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col mx-4 mb-3">
-                        <input type="password" class="form-control" id="exampleInputPassword1"
-                            placeholder="Confirmar Senha">
+                    <div class="row">
+                        <div class="col mx-4 mb-3">
+                            <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+                                placeholder="Senha">
+                        </div>
                     </div>
-                </div>
-                <div class="text-center my-2">
-                    <button type="button" class="btn btn-success w-25" data-dismiss="modal">Entrar</button>
+                    <div class="row">
+                        <div class="col mx-4 mb-3">
+                            <input type="password" class="form-control" name="passConfirm" id="exampleInputPassword1"
+                                placeholder="Confirmar Senha">
+                        </div>
+                    </div>
+                    <div class="text-center my-2">
+                        <button type="submit" class="btn btn-success w-25">Cadastrar</button>
+                    </div>
 
-                </div>
+                </form>
                 <hr class="w-100 text-dark">
                 <div class="d-flex justify-content-center mb-4">
                     <a href="#" class=" text-dark">Ja tem conta?</a>

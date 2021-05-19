@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -14,33 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
     </script>
 </head>
-
-<?php
-session_start();
-include_once("connection.php");
-
-$email = $_SESSION['email'];
-
-$name_member = filter_input(INPUT_POST, 'name_member', FILTER_SANITIZE_STRING);
-$type = $_POST['selectName'];
-$gender = $_POST['selectGender'];
-$fk = "SELECT id FROM users where email = '$email'";
-$pintao = mysqli_query($conn, $fk);
-
-if (!$pintao) {
-    echo 'Could not run query: ';
-    exit;
-}
-$row = mysqli_fetch_row($pintao);
-
-
-
-$result_family = "INSERT INTO membro_familia(nome_membro, tipo_membro, genero_membro, fk_user) VALUES('$name_member', '$type', '$gender', '$row[0]')";
-mysqli_query($conn, $result_family);
-
-
-
-?>
+<?php session_start(); ?>
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-green py-3">
@@ -49,8 +25,7 @@ mysqli_query($conn, $result_family);
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
-        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-        </form>
+
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
@@ -145,7 +120,7 @@ mysqli_query($conn, $result_family);
                 </div>
             </nav>
         </div>
-        <div id="layoutSidenav_content">
+        <div id="layoutSidenav_content" class="bg-light">
 
 
             <div class="container-fluid pt-3 bg-light">
@@ -154,101 +129,14 @@ mysqli_query($conn, $result_family);
             </div>
             <div class="bg-light">
                 <div class="container-fluid">
-
-                <?php
-
-                    if (mysqli_insert_id($conn)){
-                        echo 'pinto';
-                    header("Location: cadastro_sucesso.php");
-                    }else{
-                        echo 'pinto';
-                    header("Location: home.php");
-                    }
-
-                ?>
-
-                        
-
                     <div class="row">
-                        <div class="col-xl-4 col-sm-6 mt-2">
-                            <div class="card ">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-5 d-flex justify-content-center ">
-                                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t1.jpg"
-                                            class="perfil-img" alt="...">
-                                    </div>
-                                    <div class="col-lg-7">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Alice Liddel</h5>
-                                            <p class="card-text nowrap">Saldo: R$3234.00
-                                            </p>
-                                            <p class="card-text nowrap">Despesas: R$3213.32</p>
-                                            <p class="card-text nowrap">Renda: R$2323.32</p>
-                                            <a href="#" class="btn btn-success bg-green stretched-link">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-sm-6 mt-2">
-                            <div class="card">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-5 d-flex justify-content-center ">
-                                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t2.jpg"
-                                            class="perfil-img" alt="...">
-                                    </div>
-                                    <div class="col-lg-7">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Alice Liddel</h5>
-                                            <p class="card-text nowrap">Saldo: R$3234.00
-                                            </p>
-                                            <p class="card-text nowrap">Despesas: R$3213.32</p>
-                                            <p class="card-text nowrap">Renda: R$2323.32</p>
-                                            <a href="#" class="btn btn-success bg-green stretched-link">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-sm-6 mt-2">
-                            <div class="card">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-5 d-flex justify-content-center ">
-                                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t2.jpg"
-                                            class="perfil-img" alt="...">
-                                    </div>
-                                    <div class="col-lg-7">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Alice Liddel</h5>
-                                            <p class="card-text nowrap">Saldo: R$3234.00
-                                            </p>
-                                            <p class="card-text nowrap">Despesas: R$3213.32</p>
-                                            <p class="card-text nowrap">Renda: R$2323.32</p>
-                                            <a href="#" class="btn btn-success bg-green stretched-link">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-sm-6 mt-2">
-                            <div class="card add-membro"
-                                style="border-radius: 5%;    background-color: rgba(139, 139, 139, 0.514);">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-5 d-flex justify-content-center " style="border-radius: 5%;">
-                                        <i class="fas fa-plus p-5 text-secondary" style="font-size: 14.6rem;"></i>
-                                    </div>
-                                    <div class="col-lg-7 ">
-                                        <div class="card-body">
-                                            <h1 class="card-title text-center text-secondary">Adicionar membro</h1>
-                                            <div class="d-flex text-center ml-3">
+                        <?php include("dados_ex.php") ?>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-right p-1">
+                            <a href="addMembro.php" class="display-4" style="color: #3cca8f; font-size: 1.5rem;">Adicionar mais membros</a> 
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-
                     </div>
 
 
