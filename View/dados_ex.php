@@ -9,15 +9,17 @@ $img_mulher = "../Resources/img/mulher.png";
 $fk = "SELECT id FROM users where email = '$email'";
 $pintao = mysqli_query($conn, $fk);
 
+
 if (!$pintao) {
     echo 'Could not run query: ';
     exit;
 }
 $row = mysqli_fetch_row($pintao);
 
-$fk1 = "SELECT nome_membro, genero_membro  FROM membro_familia where fk_user = '$row[0]'";
+$fk1 = "SELECT id_membro ,nome_membro, genero_membro  FROM membro_familia where fk_user = '$row[0]'";
 $pintaozin = mysqli_query($conn, $fk1) or print(mysqli_error($conn));
 while ($rs = mysqli_fetch_array($pintaozin)){
+
     if ($rs["genero_membro"] == "Homem")
         {$url = $img_homem;}
     else 
@@ -37,7 +39,8 @@ while ($rs = mysqli_fetch_array($pintaozin)){
                         </p>
                         <p class='card-text nowrap'>Despesas: R$3213.32</p>
                         <p class='card-text nowrap'>Renda: R$2323.32</p>
-                        <a href='#' class='btn btn-success bg-green stretched-link'>Ver Perfil</a>
+                        <a href='ativos.php?id=".$rs["id_membro"]."' class='btn btn-success bg-green'>Ver ativos</a>
+                        <a href='despesas.php?id=".$rs["id_membro"]."' class='btn btn-danger'>Ver Despesas</a>
                     </div>
                 </div>
             </div>

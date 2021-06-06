@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +9,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>PESHI</title>
+
     <link href="../Resources/css/styles_temp.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
         crossorigin="anonymous" />
@@ -117,7 +117,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logado como:</div>
-                    Paulin Jorge
+                    Leonardo
                 </div>
             </nav>
         </div>
@@ -125,29 +125,118 @@
 
 
             <div class="container-fluid pt-3 bg-light">
-                <h1 class="display-4 ">Membros da familia</h1>
+                <h1 class="display-4 ">Ativos</h1>
                 <hr class="hr-green mb-5">
             </div>
             <div class="bg-light">
                 <div class="container-fluid">
                     <div class="row">
-                        <?php include("dados_ex.php") ?>
-                    </div>
-                    <div class="row">
                         <div class="col-12 text-right p-1">
-                            <a href="addMembro.php" class="display-4" style="color: #3cca8f; font-size: 1.5rem;">Adicionar mais membros</a> 
+
                         </div>
                     </div>
+                    <div class="row">
+                        <table class="table">
+                            <thead class="thead bg-green">
+                                <tr class="text-white">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Valor</th>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Descricao</th>
+                                    <th scope="col"><button class="btn btn-success " data-toggle="modal"
+                                            data-target="#modal-ativo">Adicionar
+                                        </button></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php include("showativos.php") ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="modal fade" id="modal-ativo" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content"
+                                style="border: 0; border-radius: 0; box-shadow: 0px 0px 19px -1px rgb(0 0 0 / 75%);">
+                                <form method="POST" action='addativo.php?id=<?php echo $_GET['id'] ?>'>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="button" class="close mr-2" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true" style="font-size: 2rem">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col  ">
+                                            <a class="display-4 modal-title justify-content-center d-flex text-success"
+                                                style="font-size: 2rem;">Cadastrar ativo</a>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col ml-4 mb-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">R$</div>
+                                                </div>
+                                                <input type="number" class="form-control" name="valor"
+                                                    placeholder="Valor">
+                                            </div>
+                                        </div>
+                                        <div class="col mr-4 mb-3">
+                                            <input type="date" class="form-control" name="data" placeholder="Senha">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col mx-4 mb-3">
+                                            <div class="form-group">
+                                                <textarea class="form-control" name="descricao"
+                                                    placeholder="Descricao do ativo" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mb-4 ">
+                                        <button type="submit" class="btn btn-success w-25">Cadastrar</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="modal fade" id="modal-remover" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Excluir ativo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Tem certeza que deseja remover este ativo?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-danger">Remover</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
 
 
 
                 </div>
 
             </div>
+
+
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                        <div class="text-muted">Copyright &copy; PESHI</div>
                         <div>
                             <a href="#">Privacy Policy</a>
                             &middot;
@@ -158,6 +247,7 @@
             </footer>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
