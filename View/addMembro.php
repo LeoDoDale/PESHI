@@ -15,15 +15,19 @@
     </script>
 </head>
 
+
 <body class="sb-nav-fixed">
+
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-green py-3">
         <a class="navbar-brand" href="index.php"><img class="img-responsive" style="height: 45px"
                 src="../resources/img/logo.png" alt=""></a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
+
         <!-- Navbar Search-->
         
         <!-- Navbar-->
+
         <ul class="navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#!" role="button" data-toggle="dropdown"
@@ -38,6 +42,7 @@
         </ul>
     </nav>
     <div id="layoutSidenav">
+
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
@@ -120,21 +125,20 @@
         </div>
         <div id="layoutSidenav_content">
 
-
             <div class="container-fluid pt-3 bg-light">
                 <h1 class="display-4 ">Membros da familia</h1>
                 <hr class="hr-green mb-5">
             </div>
-            <div class="bg-light h-100">
-                <div class="container  " style="width: 600px;">
 
+            <div class="bg-light h-100">
+
+                <div class="container  " style="width: 600px;">
                     <form method="POST" action="membros_ex.php">
                         <div class="form-group">
                             <label for="inputAddress">Nome</label>
                             <input type="text" class="form-control" name="name_member" id="inputAddress" placeholder="Joao augusto">
                         </div>
                         <div class="form-group">
-
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -142,10 +146,8 @@
                                 <select id="inputState" name="selectGender" class="form-control">
                                     <option selected>Homem</option>
                                     <option>Mulher</option>
-
                                 </select>
                             </div>
-
                             <div class="col-md-6">
                             <label for="inputState">Tipo</label>
                                 <select id="inputState" name="selectName" class="form-control">
@@ -153,16 +155,10 @@
                                     <option>Administrador</option>
                                 </select>
                             </div>
-
-
                         </div>
-
                         <button type="submit" class="btn btn-success mb-4">Cadastrar</button>
                     </form>
-
-
                 </div>
-
             </div>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
@@ -188,6 +184,7 @@
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="../Resources/assets/demo/datatables-demo.js"></script>
+
 </body>
 
 </html>
