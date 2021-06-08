@@ -16,7 +16,7 @@ if (!$pintao) {
 }
 $row = mysqli_fetch_row($pintao);
 
-$fk1 = "SELECT id_membro ,nome_membro, genero_membro  FROM membro_familia where fk_user = '$row[0]'";
+$fk1 = "SELECT id_membro ,nome_membro, genero_membro, tipo_membro  FROM membro_familia where fk_user = '$row[0]'";
 $pintaozin = mysqli_query($conn, $fk1) or print(mysqli_error($conn));
 while ($rs = mysqli_fetch_array($pintaozin)){
 
@@ -35,10 +35,9 @@ while ($rs = mysqli_fetch_array($pintaozin)){
                 <div class='col-lg-7'>
                     <div class='card-body'>
                         <h5 class='card-title'> ". $rs["nome_membro"] ." </h5>
-                        <p class='card-text nowrap'>Saldo: R$3234.00
+                        <p class='card-text nowrap'>". $rs["genero_membro"] ."
                         </p>
-                        <p class='card-text nowrap'>Despesas: R$3213.32</p>
-                        <p class='card-text nowrap'>Renda: R$2323.32</p>
+                        <p class='card-text nowrap'>". $rs["tipo_membro"] ."</p>
                         <a href='ativos.php?id=".$rs["id_membro"]."' class='btn btn-success bg-green'>Ver ativos</a>
                         <a href='despesas.php?id=".$rs["id_membro"]."' class='btn btn-danger'>Ver Despesas</a>
                     </div>

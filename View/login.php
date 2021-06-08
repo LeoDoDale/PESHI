@@ -13,7 +13,7 @@ if ($email && $senha){
         $rs = mysqli_fetch_array($rss);
         session_start();
         $_SESSION['email'] = $rs["email"];
-        header("Location: index.php");
+        header("Location: Membros.php");
     }
     else{
         echo "<script> alert('A senha ou email estao errados'); </script> ";

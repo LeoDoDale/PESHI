@@ -21,7 +21,7 @@ mysqli_query($conn, $result_user);
 if (mysqli_insert_id($conn)){
     header("Location: addMembro.php");
 }else{
-    header("Location: index.php");
+    header("Location: Membros.php");
 }
 
 ?>

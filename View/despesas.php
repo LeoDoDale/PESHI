@@ -20,25 +20,15 @@
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-green py-3">
-        <a class="navbar-brand" href="index.php"><img class="img-responsive" style="height: 45px"
+        <a class="navbar-brand" href="Membros.php"><img class="img-responsive" style="height: 45px"
                 src="../resources/img/logo.png" alt=""></a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
 
         <!-- Navbar-->
-        <ul class="navbar-nav ml-auto ml-md-0">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="userDropdown" href="#!" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-            </li>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#!">Settings</a>
-                <a class="dropdown-item" href="#!">Activity Log</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="login.php">Logout</a>
-            </div>
-        </ul>
+        <a class="nav-link text-white"    href="perfil.php"><i class="fas fa-user fa-fw"></i></a>
+
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -46,7 +36,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Inicio</div>
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="Membros.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Resumo
                         </a>
@@ -105,9 +95,9 @@
                             </nav>
                         </div>
                         <div class="sb-sidenav-menu-heading">Addons</div>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="relatorio.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Tabelas
+                            Relatorio
                         </a>
                         <a class="nav-link" href="landingpage.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>

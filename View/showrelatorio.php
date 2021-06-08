@@ -9,6 +9,11 @@ $rowUser = mysqli_fetch_assoc($id_user);
 $idUser = $rowUser['id'];
 $sl2 = "SELECT id_membro FROM membro_familia WHERE fk_user = $idUser";
 $id_membro = mysqli_query($conn, $sl2);
+$datai = (isset($_POST['data1']) ? $_POST['data1'] : "2021-01-01");
+$add = (isset($_POST['data1']) ? TRUE : FALSE);
+$dataf = (isset($_POST['data2']) ? $_POST['data2'] : "2022-01-01");
+
+
 while ($rs = mysqli_fetch_array($id_membro)){
     $geral = 
         "SELECT *  FROM 
@@ -19,7 +24,7 @@ while ($rs = mysqli_fetch_array($id_membro)){
             descricao_despesa as 'desc',
             id_categoria as 'tipo'
             FROM despesa
-            WHERE id_membro = ".$rs['id_membro']. "
+            WHERE id_membro = ".$rs['id_membro']. " AND (data_despesa BETWEEN '".$datai."' AND '".$dataf."')
             UNION ALL
         SELECT 
             id_renda as 'id',
@@ -28,9 +33,11 @@ while ($rs = mysqli_fetch_array($id_membro)){
             descricao as 'desc',
             NULL as 'tipo'
             FROM renda
-            WHERE id_membro = ".$rs['id_membro'].") geral
+            WHERE id_membro = ".$rs['id_membro']. " AND (data_renda BETWEEN '".$datai."' AND '".$dataf."')) geral
             ORDER BY data
             ";
+    echo $geral;
+    echo "<br>";
     $tb = mysqli_query($conn, $geral);
     while($morte = mysqli_fetch_array($tb))
     {
@@ -42,6 +49,10 @@ while ($rs = mysqli_fetch_array($id_membro)){
                     <td>".$morte["desc"]."</td>
                     <td>".$tipo."</td>
                 </tr>";
+    }
+    if ($add){
+        header("Location: relatorio.php");
+    }else{
     } 
 }
 ?>

@@ -26,5 +26,5 @@ mysqli_query($conn, $result_family);
 if (mysqli_insert_id($conn)){
     header("Location: despesas.php?id=".$id_membro."");
 }else{
-    header("Location: index.php");
+    header("Location: Membros.php");
 }
