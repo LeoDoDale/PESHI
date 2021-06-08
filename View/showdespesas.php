@@ -17,7 +17,7 @@ if (!$pintao) {
 }
 $row = mysqli_fetch_row($pintao);
 
-$fk1 = "SELECT id_despesa, valor_despesa, data_despesa, descricao  FROM despesa where id_membro = ".$id_membro."";
+$fk1 = "SELECT id_despesa, valor_despesa, data_despesa, descricao_despesa  FROM despesa where id_membro = ".$id_membro."";
 // echo $fk1;
 $pintaozin = mysqli_query($conn, $fk1) or print(mysqli_error($conn));
 while ($rs = mysqli_fetch_array($pintaozin)){

@@ -19,7 +19,7 @@ $row = mysqli_fetch_row($pintao);
 
 
 
-$result_family = "INSERT INTO despesa(valor_despesa, data_despesa, descricao, id_membro, Id_categoria) VALUES('$valor', '$data', '$descricao', $id_membro, '$categoria')";
+$result_family = "INSERT INTO despesa(valor_despesa, data_despesa, descricao_despesa, id_membro, Id_categoria) VALUES('$valor', '$data', '$descricao', $id_membro, '$categoria')";
 
 mysqli_query($conn, $result_family);
 
