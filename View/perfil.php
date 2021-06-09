@@ -121,21 +121,16 @@
             </nav>
         </div>
         <div id="layoutSidenav_content" class="bg-light">
-
-
             <div class="container-fluid pt-3 bg-light">
                 <h1 class="display-4 ">Perfil</h1>
                 <hr class="hr-green mb-5">
-
             </div>
-
             <div class="container">
                 <!-- <div class="mt-5">
                     <div class="row bg-white">
                         <div class="col-xl-3 col-lg-5 rounded d-flex justify-content-center mt-4">
                             <img src="../Resources/img/homem.png" style="height: 250px;" class="img-fluid">
                         </div>
-
                         <div class="col container">
                             <p class="display-4 my-3 text-center">Meu Perfil</p>
 
@@ -149,8 +144,6 @@
                                 <input type="password" class="form-control" value="***********"
                                     id="exampleInputPassword1" disabled>
                             </div>
-
-
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Genero:</label>
@@ -167,12 +160,7 @@
                     </div>
                 </div> -->
                 <?php include("perfilshow.php") ?>
-
-
             </div>
-
-
-
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
@@ -187,6 +175,7 @@
             </footer>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
@@ -197,6 +186,7 @@
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="../Resources/assets/demo/datatables-demo.js"></script>
+
 </body>
 
 </html>
