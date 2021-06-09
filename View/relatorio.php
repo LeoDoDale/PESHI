@@ -129,7 +129,22 @@
 
             </div>
 
-          
+            <div class="container">
+                <table class='table'>
+                    <thead class='thead bg-green'>
+                        <tr class='text-white'>
+                            <th scope='col'>Id</th>
+                            <th scope='col'>Valor</th>
+                            <th scope='col'>Data</th>
+                            <th scope='col'>Descricao</th>
+                            <th scope='col'>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php include("showrelatorio.php") ?>
+                    </tbody>
+                </table>
+
 
                 <!-- <table class="table">
                     <thead class="thead bg-green">
