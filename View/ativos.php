@@ -106,7 +106,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logado como:</div>
-                    Leonardo
+                    <p class="nowrap"><?php echo $_SESSION['email']  ?></p> 
                 </div>
             </nav>
         </div>

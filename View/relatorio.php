@@ -105,7 +105,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logado como:</div>
-                    Paulin Jorge
+                    <p class="nowrap"><?php echo $_SESSION['email']  ?></p> 
                 </div>
             </nav>
         </div>
@@ -118,7 +118,7 @@
             </div>
 
             <div class="container">
-                <form method="POST" action='showrelatorio.php'>
+                <form method="GET" action='filterdate.php'>
                     <div class="">
                         <input type="date" style="max-width: 200px; " value="2021-01-01" class="my-2 form-control mr-2 d-inline" name="data1" placeholder=""> Até
                         <input type="date" style="max-width: 200px; " value="2021-01-01" class=" my-2 form-control ml-sm-2 d-inline" name="data2" placeholder="">

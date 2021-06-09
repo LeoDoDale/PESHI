@@ -16,6 +16,8 @@
 </head>
 
 <body class="sb-nav-fixed">
+<?php session_start(); ?>
+
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-green py-3">
         <a class="navbar-brand" href="index.php"><img class="img-responsive" style="height: 45px"
                 src="../resources/img/logo.png" alt=""></a>
@@ -114,7 +116,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logado como:</div>
-                    Paulin Jorge
+                    <p class="nowrap"><?php echo $_SESSION['email']  ?></p> 
                 </div>
             </nav>
         </div>

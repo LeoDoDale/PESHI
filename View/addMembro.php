@@ -14,6 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
     </script>
 </head>
+<?php session_start(); ?>
+
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-green py-3">
@@ -104,7 +106,7 @@
 
                 <div class="sb-sidenav-footer">
                     <div class="small">Logado como:</div>
-                    Paulin Jorge
+                    <p class="nowrap"><?php echo $_SESSION['email']  ?></p> 
                 </div>
             </nav>
         </div>
