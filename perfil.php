@@ -41,7 +41,7 @@
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav " id="Accordion">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Inicio</div>
@@ -87,7 +87,12 @@
                                         <a class="nav-link" href="#">Agua</a>
                                     </nav>
                                 </div>
-                                
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                                    data-target="#pagesCollapseError" aria-expanded="false"
+                                    aria-controls="pagesCollapseError">
+                                    Todas
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
                                 <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
                                     data-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
@@ -191,7 +196,7 @@
     <script src="../Resources/assets/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    
+    <script src="../Resources/assets/demo/datatables-demo.js"></script>
 </body>
 
 </html>
